@@ -1,15 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.print("[");
-        int[] numbers = {1,2,3,6};
+        int[] numbers = {1, 5, 2, 17};
         int[] centralPart = getArrayMiddle(numbers);
-        for (int num:centralPart){
-            System.out.print(num);
+        System.out.print("[");
+        for (int i = 0; i < centralPart.length; i++) {
+            System.out.print(centralPart[i]);
+            if (i < centralPart.length - 1) {
+                System.out.print(", ");
+            }
         }
-        System.out.print("]");
-
-
+        System.out.println("]");
     }
+
     public static int[] getArrayMiddle(int[] numbers) {
         if (numbers.length <= 2)
             return numbers;
